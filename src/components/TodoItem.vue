@@ -13,7 +13,7 @@
         }
     });
 
-    defineEmits(["edit-todo", "update-todo", "toggle-complete"]);
+    defineEmits(["edit-todo", "update-todo", "toggle-complete", "delete-todo"]);
 </script>
 
 <template>
@@ -51,7 +51,13 @@
                 width="22"
                 @click="$emit('edit-todo', index)"
             />
-            <Icon icon="ph:trash" class="icon trash-icon" color="f95e5e" width="22" />
+            <Icon 
+              icon="ph:trash" 
+              class="icon trash-icon" 
+              color="f95e5e" 
+              width="22" 
+              @click="$emit('delete-todo', todo.id)" 
+            />
         </div>
     </li>
 </template>

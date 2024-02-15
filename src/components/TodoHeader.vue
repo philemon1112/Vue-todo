@@ -37,6 +37,12 @@ header {
       h1 {
         font-size: 24px;
       }
+
+      @media screen and (max-width: 400px) {
+        h1{
+          font-size: 15px;
+        }
+      }
     }
 
     .nav-routes {
